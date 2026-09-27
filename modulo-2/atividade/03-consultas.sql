@@ -21,7 +21,7 @@ ORDER BY p.p_nome ASC;
 -- Listar as disciplinas da que possui mais alunos
 -- matriculados para a que possui menos
 
-SELECT d.nome, COUNT(m.CPF_aluno)
+SELECT d.nome, COUNT(m.CPF_aluno) AS quantidade_alunos
 FROM disciplina d
 JOIN turma t
     ON d.cod_disciplina = t.cod_disciplina
