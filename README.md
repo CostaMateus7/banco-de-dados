@@ -26,8 +26,8 @@ Ao longo da disciplina, são abordados conceitos como:
 
 ## Tecnologias
 
+- MySQL
 - PostgreSQL
-- MySQL 8
 - SQL
 - VS Code
 - Git
@@ -42,7 +42,8 @@ banco-de-dados/
 │   ├── atividade/
 │   │   ├── 01-criacao-tabelas.sql
 │   │   ├── 02-insercao-dados.sql
-│   │   └── 03-consultas.sql
+│   │   ├── 03-consultas.sql
+│   │   └── atividade-completa.sql
 │   │
 │   └── estudos/
 │       ├── ddl/
@@ -50,3 +51,83 @@ banco-de-dados/
 │       └── consultas/
 │
 └── README.md
+```
+
+## Atividade do Módulo 2
+
+A atividade consiste na implementação de um banco de dados para um sistema acadêmico, utilizando como base o mapeamento relacional desenvolvido anteriormente na disciplina.
+
+O banco possui as seguintes tabelas:
+
+- Pessoa
+- Professor
+- Aluno
+- Disciplina
+- Turma
+- Matrícula
+
+### Arquivos
+
+**01-criacao-tabelas.sql**
+
+Responsável pela criação das tabelas e definição das chaves primárias, chaves estrangeiras e demais restrições do banco de dados.
+
+**02-insercao-dados.sql**
+
+Contém os registros utilizados para popular as tabelas e permitir os testes das consultas e relacionamentos.
+
+**03-consultas.sql**
+
+Contém as consultas solicitadas na atividade:
+
+- Listagem dos professores cadastrados;
+- Listagem dos alunos em ordem alfabética;
+- Listagem das disciplinas ordenadas pela quantidade de alunos matriculados.
+
+As consultas utilizam recursos como `SELECT`, `JOIN`, `ORDER BY`, `GROUP BY` e `COUNT`.
+
+**atividade-completa.sql**
+
+Reúne a criação das tabelas, inserção dos dados e consultas em um único arquivo, respeitando a ordem de execução solicitada na atividade:
+
+```text
+CREATE TABLE → INSERT → SELECT
+```
+
+## Execução
+
+Os arquivos separados devem ser executados nesta ordem:
+
+```text
+1. 01-criacao-tabelas.sql
+2. 02-insercao-dados.sql
+3. 03-consultas.sql
+```
+
+Também é possível executar diretamente o arquivo:
+
+```text
+atividade-completa.sql
+```
+
+que contém toda a implementação da atividade.
+
+Durante o desenvolvimento, os scripts foram testados localmente utilizando **PostgreSQL**.
+
+A solução final também foi validada no **MySQL**, conforme solicitado na atividade.
+
+## Estudos
+
+A pasta `estudos` é destinada aos exercícios realizados durante o aprendizado de SQL.
+
+Ela está dividida em:
+
+- `ddl` — criação e alteração de estruturas do banco de dados;
+- `dml` — inserção, atualização e exclusão de dados;
+- `consultas` — exercícios envolvendo consultas e relacionamentos entre tabelas.
+
+## Autor
+
+**Mateus Costa Santos**
+
+Estudante de Tecnologia da Informação — UFMS
